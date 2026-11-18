@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.28.0.schema.json
+
+PackageIdentifier: ShishirShastry.Evora
+PackageVersion: 0.2.0
+InstallerType: nullsoft
+InstallerSwitches:
+  Upgrade: --updated
+UpgradeBehavior: install
+Protocols:
+- evora
+FileExtensions:
+- evora
+- fig
+- opendesign
+ProductCode: 88bcaf3e-ef9e-5573-8b2e-b35ae9ff1f25
+ReleaseDate: 2026-11-18
+Installers:
+- Architecture: x64
+  Scope: user
+  InstallerUrl: https://github.com/ShishirShastry/evora/releases/download/v0.2.0/Evora-Setup-0.2.0.exe
+  InstallerSha256: 3235DC18F8DE73CB12CED0A7B984515B664A87BB350CC7C4FDDFD9F64F1DB490
+  InstallerSwitches:
+    Custom: /currentuser
+- Architecture: x64
+  Scope: machine
+  InstallerUrl: https://github.com/ShishirShastry/evora/releases/download/v0.2.0/Evora-Setup-0.2.0.exe
+  InstallerSha256: 3235DC18F8DE73CB12CED0A7B984515B664A87BB350CC7C4FDDFD9F64F1DB490
+  InstallerSwitches:
+    Custom: /allusers
+  ElevationRequirement: elevatesSelf
+ManifestType: installer
+ManifestVersion: 1.28.0
